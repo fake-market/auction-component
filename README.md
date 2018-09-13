@@ -1,5 +1,5 @@
 # Auction Service
-A Bidding service for e-commerce product page
+Bidding service for e-commerce product page
 
 ## Features
 * Make a bid for a product
