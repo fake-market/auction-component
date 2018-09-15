@@ -2,34 +2,32 @@
   "name": "auction-component",
   "version": "1.0.0",
   "description": "Service allowing users to watch a product or bid in the auction",
+  "homepage": "https://github.com/anhjoseph/auction-component#readme",
+  "license": "ISC",
+  "author": "Joseph An",
   "main": "webpack.config.js",
-  "scripts": {
-    "test": "jest --coverage --watch",
-    "test:coverage": "jest --coverage",
-    "start": "nodemon server/index.js",
-    "build": "webpack -w"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anhjoseph/auction-component.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anhjoseph/auction-component/issues"
-  },
-  "homepage": "https://github.com/anhjoseph/auction-component#readme",
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
     }
   },
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "build": "webpack -w",
+    "test": "jest --coverage --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint --fix \"./**/*.js*\""
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "moment": "^2.22.2",
     "pg": "^7.4.3",
@@ -47,6 +45,13 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
     "grunt": "^1.0.3",
     "grunt-aws": "^0.6.2",
     "identity-obj-proxy": "^3.0.0",
@@ -54,6 +59,7 @@
     "jest-cli": "^23.1.0",
     "jest-enzyme": "^6.0.1",
     "nodemon": "^1.17.5",
+    "prettier": "^1.14.2",
     "sequelize-mock": "^0.10.2",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",

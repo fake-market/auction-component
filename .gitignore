@@ -3,6 +3,7 @@ client/public/bundle.js
 .babelrc
 aws-credentials.json
 .dockerignore
+.env
 
 # General
 .DS_Store

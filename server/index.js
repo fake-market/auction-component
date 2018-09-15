@@ -9,12 +9,12 @@ const port = 9000;
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/public/')));
 app.use('/api', router);
 
-app.listen(port, (err) => {
+app.listen(port, err => {
   if (err) {
     console.log('error connecting to port', port);
   } else {

@@ -1,5 +1,5 @@
 export default async () => {
-  return await new Promise(resolve => {
+  await new Promise(resolve => {
     resolve();
   });
 };

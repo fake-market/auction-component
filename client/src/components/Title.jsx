@@ -8,8 +8,8 @@ class Title extends React.Component {
     super(props);
     this.state = {
       id: 1,
-      name: ''
-    }
+      name: '',
+    };
     this.fetchName = this.fetchName.bind(this);
   }
 
@@ -18,23 +18,23 @@ class Title extends React.Component {
   }
 
   fetchName() {
-    getProductInfo({
-      id: this.state.id
-    }).then(({ data }) => {
+    const { id } = this.state;
+    getProductInfo({ id }).then(({ data }) => {
       this.setState({
         id: data.id,
-        name: data.name
-      })
-    })
+        name: data.name,
+      });
+    });
   }
 
   render() {
+    const { name } = this.state;
     return (
       <div>
-        <div styleName="item-text">{this.state.name}</div>
+        <div styleName="item-text">{name}</div>
         <hr />
       </div>
-    )
+    );
   }
 }
 
