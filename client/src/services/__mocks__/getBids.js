@@ -2,8 +2,7 @@ const fakeData = {
   data: [5, 100],
 };
 
-export default async () => {
-  await new Promise(resolve => {
+export default async () =>
+  new Promise(resolve => {
     resolve(fakeData);
   });
-};
