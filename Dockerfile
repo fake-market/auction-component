@@ -1,14 +1,11 @@
 FROM node:10
 
-RUN apt-get update -yqq \
-  && apt-get install -yqq --no-install-recommends \
-  postgresql-client \
-  && rm -rf /var/lib/apt/lists
-
-WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json .
+WORKDIR /app
+COPY package.json /app
+COPY package-lock.json /app
 RUN npm install
-COPY . .
+COPY . /app
 
-EXPOSE 9000
+EXPOSE 3000
+
+CMD ["node", "./server/index.js"]

@@ -2,22 +2,28 @@ div {
   font-family: "Helvetica neue", Helvetica, Verdana, Sans-serif;
   font-size: 13px;
 }
+
 a, a:visited {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
   color: rgb(21, 21, 233);
 }
+
 .auction-container {
   width: auto;
 }
+
 .info-bids-container {
   width: auto;
 }
+
 .info-container {
   margin-bottom: 15px;
 }
+
 .bid-container {
   height: auto;
   background-color: rgb(226, 226, 226);
@@ -26,10 +32,12 @@ a:hover {
   padding-right: 2px;
   padding-bottom: 2px;
 }
+
 .bid-form {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .col-1 {
   display: inline-block;
   width: 20%;
@@ -38,36 +46,48 @@ a:hover {
   margin-top: 5px;
   color: rgb(84, 83, 83);
 }
+
 .col-2 {
   display: inline-block;
   width: 30%;
   margin-left: 12px;
   text-align: left;
 }
+
 .col-3 {
   display: inline-block;
   width: auto;
   text-align: left;
 }
+
 .condition {
+  display: inline-block;
+  width: 30%;
+  margin-left: 12px;
+  text-align: left;
   font-weight: bold;
 }
+
 .end-time {
   display: inline-block;
   margin-left: 12px;
   text-align: left;
 }
+
 .end-date {
   font-size: 10px;
 }
+
 .current-bid {
   font-size: 18px;
   font-weight: bold;
 }
+
 .bid-input {
   font-size: 18px;
   width: 65%;
 }
+
 .place-bid {
   background: linear-gradient(rgba(29, 109, 194, 0.858), rgba(32, 74, 165, 0.94));
   color: white;
@@ -78,12 +98,20 @@ a:hover {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .place-bid:hover {
   background-color: rgba(25, 52, 109, 0.94);
 }
+
 .instruction {
   font-size: 11px;
 }
+
+.alert {
+  font-size: 11px;
+  color: red;
+}
+
 .add-watcher {
   background-color: rgba(230, 230, 230, 0.975);
   border: none;
@@ -92,9 +120,11 @@ a:hover {
   margin-bottom: 5px;
   font-size: 13px;
 }
+
 .add-watcher:hover {
   text-decoration: underline;
 }
+
 .watchers {
   background-color: white;
   text-align: center;

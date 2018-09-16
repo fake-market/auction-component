@@ -1,9 +1,8 @@
 const fakeData = {
-  data: [5, 100]
+  data: [5, 100],
 };
 
-export default async () => {
-  return await new Promise(resolve => {
+export default async () =>
+  new Promise(resolve => {
     resolve(fakeData);
   });
-};

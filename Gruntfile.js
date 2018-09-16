@@ -1,5 +1,4 @@
-module.exports = (grunt) => {
-
+module.exports = grunt => {
   grunt.loadNpmTasks('grunt-aws');
 
   grunt.initConfig({
@@ -9,14 +8,14 @@ module.exports = (grunt) => {
         accessKeyId: '<%= aws.accessKeyId %>',
         secretAccessKey: '<%= aws.secretAccessKey %>',
         bucket: 'auction-component',
-        region: 'us-west-1'
+        region: 'us-west-1',
       },
       build: {
         cwd: 'client/public/',
-        src: 'bundle.js'
-      }
-    }
+        src: 'bundle.js',
+      },
+    },
   });
-  
+
   grunt.registerTask('default', ['s3']);
 };

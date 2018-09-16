@@ -8,34 +8,39 @@ module.exports = {
   entry: path.resolve(SRC_DIR, 'index.jsx'),
   output: {
     filename: 'bundle.js',
-    path: BUILD_DIR
+    path: BUILD_DIR,
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: [/node_modules/],
-        use: [{
-          loader: 'babel-loader',
-          options: { presets: ['env', 'react'] }
-        }],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { presets: ['env', 'react'] },
+          },
+        ],
       },
       {
         test: /\.css$/,
         loaders: [
-            'style-loader?sourceMap',
-            'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
-        ]
+          'style-loader?sourceMap',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+        ],
       },
       {
         test: /\.scss$/,
         loaders: [
-            'style?sourceMap',
-            'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
-            'resolve-url',
-            'sass?sourceMap'
-        ]
-      }
-    ]
-  }
-}
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'resolve-url',
+          'sass?sourceMap',
+        ],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+};
